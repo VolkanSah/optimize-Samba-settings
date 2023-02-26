@@ -1,4 +1,4 @@
-# Optimize Samba for Security and Performance
+# Optimize your Samba Server 2023
 By these following  tips, you can optimize your Samba Server and provide a faster and more reliable file sharing service for your users.
 
 ## Basics
