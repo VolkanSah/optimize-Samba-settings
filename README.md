@@ -90,5 +90,7 @@ This example smb.conf file includes some of the settings I mentioned earlier, su
 
 Note that this is just an example configuration, and you may need to adjust the settings based on your specific environment and requirements. Also, be sure to test any changes in a non-production environment before making them on your production server.
 
+**Volkan Sah**
+
 
 
