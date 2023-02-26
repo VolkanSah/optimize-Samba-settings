@@ -53,7 +53,7 @@ max protocol = SMB3
 ```
 You can also adjust other settings in the smb.conf file to further optimize Samba performance. Be sure to test any changes in a non-production environment before making them on your production server.
 
-## Only for Nerds can damage your system)
+## Only for Advanced User (can damage your system)
 an example smb.conf file that is optimized for performance:
 
 ```shell
