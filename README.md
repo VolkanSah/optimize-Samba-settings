@@ -48,31 +48,31 @@ Using a caching solution, such as Samba's built-in VFS cache or an external cach
 ### Enable Asynchronous I/O
 Enabling asynchronous I/O (AIO) can improve performance by allowing the server to handle multiple I/O operations simultaneously. You can enable AIO in the Samba configuration file.
 
-\`\`\`shell
+```shell
 aio read size = 1
 aio write size = 1
-\`\`\`
+```
 
 ### Use Modern Compression
 Modern compression algorithms can significantly reduce the amount of data transmitted over the network. You can enable SMB compression in Samba.
 
-\`\`\`shell
+```shell
 smb compression = yes
-\`\`\`
+```
 
 ### Enable Multi-Channel Support
 SMB3 introduced multi-channel support, which allows the use of multiple network connections for a single SMB session, increasing throughput and redundancy.
 
-\`\`\`shell
+```shell
 server multi channel support = yes
-\`\`\`
+```
 
 ### Optimize for SSD/NVMe Storage
 If you are using SSD or NVMe storage, you can further optimize Samba by adjusting settings specific to high-speed storage solutions.
 
-\`\`\`shell
+```shell
 write cache size = 10485760
-\`\`\`
+```
 
 ### Regularly Monitor and Tune Performance
 Regular monitoring of your Samba server's performance can help identify bottlenecks and areas for improvement. Use tools like \`smbstatus\`, \`iotop\`, and \`htop\` to monitor Samba activity and system performance.
@@ -85,31 +85,31 @@ The Linux kernel receives numerous updates and performance improvements. Using t
 ### Socket options
 The socket options setting controls various socket options for the connection between the server and clients. You can increase the SO_RCVBUF and SO_SNDBUF values to increase the size of the receive and send buffers, respectively. This can help improve performance by allowing more data to be sent and received at once. Here's an example:
 
-\`\`\`shell
+```shell
 socket options = SO_RCVBUF=8192 SO_SNDBUF=8192
-\`\`\`
+```
 
 ### Read raw and write raw
 The read raw and write raw settings control whether Samba uses raw mode for reading and writing data. When set to yes, Samba bypasses the standard I/O buffering and caching mechanisms, which can help improve performance. Here's an example:
 
-\`\`\`shell
+```shell
 read raw = yes
 write raw = yes
-\`\`\`
+```
 
 ### SMB encrypt
 The smb encrypt setting controls whether SMB packet encryption is used. When set to desired or required, all SMB packets are encrypted, which can help improve security but may decrease performance. You can set this to off if performance is more important than security. Here's an example:
 
-\`\`\`shell
+```shell
 smb encrypt = off
-\`\`\`
+```
 
 ### Max protocol
 The max protocol setting controls the maximum SMB protocol version that Samba will use. Setting this to the latest version that is supported by your clients and server can help improve performance and security. Here's an example:
 
-\`\`\`shell
+```shell
 max protocol = SMB3
-\`\`\`
+```
 
 You can also adjust other settings in the smb.conf file to further optimize Samba performance. Be sure to test any changes in a non-production environment before making them on your production server.
 
@@ -118,7 +118,7 @@ You can also adjust other settings in the smb.conf file to further optimize Samb
 ### Example smb.conf file
 An example smb.conf file that is optimized for performance:
 
-\`\`\`shell
+```shell
 [global]
 socket options = TCP_NODELAY IPTOS_LOWDELAY SO_RCVBUF=65536 SO_SNDBUF=65536
 read raw = yes
@@ -145,10 +145,11 @@ path = /path/to/share1
 read only = no
 valid users = user1
 write list = user1
-\`\`\`
+```
 
 This example smb.conf file includes some of the settings mentioned earlier, such as socket options, read raw, write raw, and max protocol. It also includes other settings to further optimize Samba performance, such as sync always, use sendfile, and large readwrite.
 
 Note that this is just an example configuration, and you may need to adjust the settings based on your specific environment and requirements. Also, be sure to test any changes in a non-production environment before making them on your production server.
 
+## Credits
 **Volkan Sah**
