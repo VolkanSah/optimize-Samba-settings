@@ -120,31 +120,76 @@ An example smb.conf file that is optimized for performance:
 
 ```shell
 [global]
+; Set socket options to optimize network performance
 socket options = TCP_NODELAY IPTOS_LOWDELAY SO_RCVBUF=65536 SO_SNDBUF=65536
+
+; Enable raw read operations
 read raw = yes
+
+; Enable raw write operations
 write raw = yes
+
+; Set the maximum SMB protocol version to SMB3
 max protocol = SMB3
+
+; Require server signing for all communications
 server signing = mandatory
+
+; Require encryption for all SMB communications
 smb encrypt = required
+
+; Enable strict allocation of file space
 strict allocate = yes
+
+; Enable opportunistic locking
 oplocks = yes
+
+; Enable kernel-level opportunistic locking
 kernel oplocks = yes
+
+; Disable POSIX locking
 posix locking = no
+
+; Ensure data is always synchronized with disk
 sync always = yes
+
+; Use the sendfile system call for sending files
 use sendfile = yes
+
+; Set the minimum size for receivefile operation
 min receivefile size = 16384
+
+; Set the size of the write cache
 write cache size = 2097152
+
+; Set the time in minutes before an idle connection is terminated
 deadtime = 15
+
+; Set the maximum transmit packet size
 max xmit = 65535
+
+; Enable large read and write operations
 large readwrite = yes
+
+; Set the maximum size of the log file in kilobytes
 max log size = 2048
+
+; Set the logging level (1 = minimal logging)
 log level = 1
 
 [share1]
+; Path to the shared directory
 path = /path/to/share1
+
+; Allow read and write access to valid users
 read only = no
+
+; Specify valid users who can access the share
 valid users = user1
+
+; Specify users who have write access to the share
 write list = user1
+
 ```
 
 This example smb.conf file includes some of the settings mentioned earlier, such as socket options, read raw, write raw, and max protocol. It also includes other settings to further optimize Samba performance, such as sync always, use sendfile, and large readwrite.
