@@ -3,6 +3,7 @@
 
 By following these tips, you can optimize your Samba Server and provide a faster and more reliable file sharing service for your users.
 
+
 ## Table of Contents
 - [Basics](#basics)
   - [Use the latest version of Samba](#use-the-latest-version-of-samba)
@@ -113,7 +114,8 @@ max protocol = SMB3
 
 You can also adjust other settings in the smb.conf file to further optimize Samba performance. Be sure to test any changes in a non-production environment before making them on your production server.
 
-## Only for Advanced Users (can damage your system)
+> **⚠️ Warning:**  
+> These settings are for advanced users only. Misconfigurations can damage your system. Always make a backup of your `smb.conf` file before making changes.
 
 ### Example smb.conf file
 An example smb.conf file that is optimized for performance:
