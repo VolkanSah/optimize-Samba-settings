@@ -2,6 +2,9 @@
 # Optimize your Samba Server 2024
 
 By following these tips, you can optimize your Samba Server and provide a faster and more reliable file sharing service for your users.
+> **⚠️ Warning:**  
+> These settings are for advanced users only. Misconfigurations **will** damage your system. Always make a backup of your `smb.conf` file before making changes.
+Note: These configurations are specifically designed for a Samba Server environment, not for consumer-grade NAS devices or systems where SMB is simply passing data packets throug!
 
 
 ## Table of Contents
