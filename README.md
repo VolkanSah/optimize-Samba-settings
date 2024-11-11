@@ -1,5 +1,6 @@
 
-# Optimize your Samba Server 2024
+# Optimize your Samba Server 
+### update 2024
 
 By following these tips, you can optimize your Samba Server and provide a faster and more reliable file sharing service for your users.
 > **⚠️ Warning:**  
