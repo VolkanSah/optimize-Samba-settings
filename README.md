@@ -60,9 +60,12 @@ aio write size = 1
 ### Use Modern Compression
 Modern compression algorithms can significantly reduce the amount of data transmitted over the network. You can enable SMB compression in Samba.
 
+
 ```shell
 smb compression = yes
 ```
+ - Enables SMB compression, which can significantly reduce the amount of data transmitted over the network.
+ - Supported on Windows 10 and Windows Server 2019 or later.
 Please read this! -> https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-compression
 
 ### Enable Multi-Channel Support
@@ -71,6 +74,8 @@ SMB3 introduced multi-channel support, which allows the use of multiple network 
 ```shell
 server multi channel support = yes
 ```
+ - Enables SMB3 multi-channel support, which allows the use of multiple network connections for a single SMB session, increasing throughput and redundancy.
+ - Supported on Windows Server 2012 R2 and later.
 
 ### Optimize for SSD/NVMe Storage
 If you are using SSD or NVMe storage, you can further optimize Samba by adjusting settings specific to high-speed storage solutions.
