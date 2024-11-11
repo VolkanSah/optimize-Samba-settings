@@ -63,6 +63,7 @@ Modern compression algorithms can significantly reduce the amount of data transm
 ```shell
 smb compression = yes
 ```
+Please read this! -> https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-compression
 
 ### Enable Multi-Channel Support
 SMB3 introduced multi-channel support, which allows the use of multiple network connections for a single SMB session, increasing throughput and redundancy.
